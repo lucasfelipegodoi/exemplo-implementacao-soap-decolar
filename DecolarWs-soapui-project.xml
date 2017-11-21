@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="e223b3b0-0135-4b83-961d-875d073d9ffc" activeEnvironment="Default" name="DecolarWs" resourceRoot="${projectDir}" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7100b5b7-d4a3-402d-88eb-3273801dc0f9" wsaVersion="NONE" name="DecolarSoap12" type="wsdl" bindingName="{http://tempuri.org/}DecolarSoap12" soapVersion="1_2" anonymous="optional" definition="http://localhost:64374/Rpc/Decolar.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint></con:endpoints><con:operation id="7dd68e15-d30c-4e57-a801-7c77d18e9528" isOneWay="false" action="http://tempuri.org/ComprarTicket" name="ComprarTicket" bindingOperationName="ComprarTicket" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6ad67e0b-e814-40fb-90a0-dd04640a3843" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:ComprarTicket>\r
+         <tem:idCliente>?</tem:idCliente>\r
+         <tem:idVoo>?</tem:idVoo>\r
+         <tem:foiPago>?</tem:foiPago>\r
+      </tem:ComprarTicket>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/DecolarSoap/ComprarTicketRequest"/></con:call></con:operation><con:operation id="1bb8c2e5-2fbc-46aa-96fd-a13abd965dfb" isOneWay="false" action="http://tempuri.org/ObterTodosClientes" name="ObterTodosClientes" bindingOperationName="ObterTodosClientes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a1ae21b7-a797-41d8-8e7d-b34082863b1a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:ObterTodosClientes/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/DecolarSoap/ObterTodosClientesRequest"/></con:call></con:operation><con:operation id="3be706e5-fb50-4bd6-9dce-03d5aa800bf6" isOneWay="false" action="http://tempuri.org/ObterTodosVoos" name="ObterTodosVoos" bindingOperationName="ObterTodosVoos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="071444aa-089b-4619-916b-a4c974ac6ab9" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:ObterTodosVoos>\r
+         <tem:foiConfirmado>?</tem:foiConfirmado>\r
+      </tem:ObterTodosVoos>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/DecolarSoap/ObterTodosVoosRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="0b59a7f2-a699-40fb-b697-1e9aed167f8b" wsaVersion="NONE" name="DecolarSoap" type="wsdl" bindingName="{http://tempuri.org/}DecolarSoap" soapVersion="1_1" anonymous="optional" definition="http://localhost:64374/Rpc/Decolar.asmx?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:64374/Rpc/Decolar.asmx?wsdl"><con:part><con:url>http://localhost:64374/Rpc/Decolar.asmx?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="ObterTodosClientes">
+        <s:complexType/>
+      </s:element>
+      <s:element name="ObterTodosClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObterTodosClientesResult" nillable="true" type="tns:EnvelopeCliente"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnvelopeCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="tns:ArrayOfCliente"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCliente">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cliente" nillable="true" type="tns:Cliente"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdCliente" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="NomeCompleto" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cpf" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ObterTodosVoos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="foiConfirmado" nillable="true" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ObterTodosVoosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ObterTodosVoosResult" nillable="true" type="tns:EnvelopeVoos"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnvelopeVoos">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="tns:ArrayOfVoo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfVoo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Voo" nillable="true" type="tns:Voo"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Voo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdVoo" type="s:int"/>
+          <s:element minOccurs="0" maxOccurs="1" name="CodVoo" type="s:string"/>
+          <s:element minOccurs="1" maxOccurs="1" name="FoiConfirmado" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ComprarTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="idCliente" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="idVoo" type="s:int"/>
+            <s:element minOccurs="1" maxOccurs="1" name="foiPago" type="s:boolean"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ComprarTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ComprarTicketResult" nillable="true" type="tns:EnvelopeSingleTicket"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EnvelopeSingleTicket">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Content" type="tns:Ticket"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Ticket">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IdTicket" type="s:int"/>
+          <s:element minOccurs="1" maxOccurs="1" name="DataHoraCompra" type="s:dateTime"/>
+          <s:element minOccurs="1" maxOccurs="1" name="FoiPago" type="s:boolean"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Cliente" type="tns:Cliente"/>
+          <s:element minOccurs="0" maxOccurs="1" name="Voo" type="tns:Voo"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ObterTodosClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterTodosClientes"/>
+  </wsdl:message>
+  <wsdl:message name="ObterTodosClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterTodosClientesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ObterTodosVoosSoapIn">
+    <wsdl:part name="parameters" element="tns:ObterTodosVoos"/>
+  </wsdl:message>
+  <wsdl:message name="ObterTodosVoosSoapOut">
+    <wsdl:part name="parameters" element="tns:ObterTodosVoosResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ComprarTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:ComprarTicket"/>
+  </wsdl:message>
+  <wsdl:message name="ComprarTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:ComprarTicketResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="DecolarSoap">
+    <wsdl:operation name="ObterTodosClientes">
+      <wsdl:input message="tns:ObterTodosClientesSoapIn"/>
+      <wsdl:output message="tns:ObterTodosClientesSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTodosVoos">
+      <wsdl:input message="tns:ObterTodosVoosSoapIn"/>
+      <wsdl:output message="tns:ObterTodosVoosSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="ComprarTicket">
+      <wsdl:input message="tns:ComprarTicketSoapIn"/>
+      <wsdl:output message="tns:ComprarTicketSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DecolarSoap" type="tns:DecolarSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ObterTodosClientes">
+      <soap:operation soapAction="http://tempuri.org/ObterTodosClientes" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTodosVoos">
+      <soap:operation soapAction="http://tempuri.org/ObterTodosVoos" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprarTicket">
+      <soap:operation soapAction="http://tempuri.org/ComprarTicket" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DecolarSoap12" type="tns:DecolarSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ObterTodosClientes">
+      <soap12:operation soapAction="http://tempuri.org/ObterTodosClientes" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObterTodosVoos">
+      <soap12:operation soapAction="http://tempuri.org/ObterTodosVoos" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ComprarTicket">
+      <soap12:operation soapAction="http://tempuri.org/ComprarTicket" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Decolar">
+    <wsdl:port name="DecolarSoap" binding="tns:DecolarSoap">
+      <soap:address location="http://localhost:64374/Rpc/Decolar.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="DecolarSoap12" binding="tns:DecolarSoap12">
+      <soap12:address location="http://localhost:64374/Rpc/Decolar.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint></con:endpoints><con:operation id="20a1db82-c6b2-4748-859a-08cd762daf58" isOneWay="false" action="http://tempuri.org/ComprarTicket" name="ComprarTicket" bindingOperationName="ComprarTicket" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a335594c-33f3-44b2-a375-db64448158de" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ComprarTicket>\r
+         <tem:idCliente>?</tem:idCliente>\r
+         <tem:idVoo>?</tem:idVoo>\r
+         <tem:foiPago>?</tem:foiPago>\r
+      </tem:ComprarTicket>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ComprarTicket"/></con:call><con:call id="f8e3e830-b9a3-43be-9079-8e0141e59437" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ComprarTicket>\r
+         <tem:idCliente>1</tem:idCliente>\r
+         <tem:idVoo>2</tem:idVoo>\r
+         <tem:foiPago>true</tem:foiPago>\r
+      </tem:ComprarTicket>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ComprarTicket"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="ef19b890-d51c-4ea9-a5cd-8d751f9e9829" isOneWay="false" action="http://tempuri.org/ObterTodosClientes" name="ObterTodosClientes" bindingOperationName="ObterTodosClientes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a1a62071-f7e7-4ca4-b325-c24684b2dff0" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ObterTodosClientes/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObterTodosClientes"/></con:call><con:call id="ac1153b8-ca42-43d0-ad7a-352c54b4aa17" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ObterTodosClientes/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObterTodosClientes"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="92cb88e7-8834-44db-878d-6283124b1b72" isOneWay="false" action="http://tempuri.org/ObterTodosVoos" name="ObterTodosVoos" bindingOperationName="ObterTodosVoos" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="36189d7d-6312-4bad-8dc9-bcf5cbddd526" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ObterTodosVoos>\r
+         <tem:foiConfirmado>?</tem:foiConfirmado>\r
+      </tem:ObterTodosVoos>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObterTodosVoos"/></con:call><con:call id="c723f80e-5f92-41bf-b08e-5a43a8beb30d" name="Request 2"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:64374/Rpc/Decolar.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:ObterTodosVoos>\r
+         <tem:foiConfirmado>true</tem:foiConfirmado>\r
+      </tem:ObterTodosVoos>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/ObterTodosVoos"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
