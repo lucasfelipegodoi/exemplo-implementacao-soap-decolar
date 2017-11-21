@@ -80,7 +80,6 @@
   <ItemGroup>
     <Compile Include="Core\EnvelopeTickets.cs" />
     <Compile Include="Core\EnvelopeVoos.cs" />
-    <Compile Include="Core\IEnvelope.cs" />
     <Compile Include="Core\EnvelopeCliente.cs" />
     <Compile Include="Core\Model\Cliente.cs" />
     <Compile Include="Core\Model\Ticket.cs" />
