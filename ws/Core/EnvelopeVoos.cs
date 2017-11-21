@@ -7,7 +7,7 @@ using ws.Core.Model;
 namespace ws.Core
 {
     [XmlRoot]
-    public class EnvelopeVoos : IEnvelope
+    public class EnvelopeVoos
     {
         public EnvelopeVoos() { }
 

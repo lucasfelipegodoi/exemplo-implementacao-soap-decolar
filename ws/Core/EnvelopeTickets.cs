@@ -7,7 +7,7 @@ using ws.Core.Model;
 namespace ws.Core
 {
     [XmlRoot]
-    public class EnvelopeSingleTicket : IEnvelope
+    public class EnvelopeSingleTicket
     {
         public EnvelopeSingleTicket() { }
 
